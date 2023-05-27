@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineWorld</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./home.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav__container">
+            <div class="logos">
+                <h3 class="logo">CineWorld</h3>
+            </div>
+            <div class="nav__link__wrapper">
+                <ul class="nav__links">
+                    <li class="link">
+                        <a href="" class="nav__link__anchor link__hover-effect">Home</a>
+                    </li>
+                    <li class="link">
+                        <a href="./movie.html" class="nav__link__anchor link__hover-effect">Search Movie</a>
+                    </li>
+                    <li class="link">
+                        <a href="" class="nav__link__anchor link__hover-effect">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="header__wrapper">
+                    <div class="description__wrapper">
+                        <h1 class="title">Welcome to <span class="text--red">CineWorld</span></h1>
+                         <h2 class="description">Watch <span class="text--red"> movies</span> now in 4K HD</h2>
+                         <div class="input__field">
+                            <form>
+                                <input type="text" id="input--movie"class="movie--bar movie--input" placeholder="Search for movies"onkeypress="retrieveTitle(event)">
+                               <a href="./movie.html"><input type="button" value="Search" class="btn--search"onkeypress="retrieveTitle(event)"></a>
+                            </form>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

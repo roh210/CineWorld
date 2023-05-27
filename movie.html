@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+    integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <nav class="movie--nav">
+        <div class="nav__container movie__nav__container">
+            <div class="logos">
+                <h3 class="logo">CineWorld</h3>
+            </div>
+            <div class="nav__link__wrapper">
+                <ul class="nav__links">
+                    <li class="link">
+                        <a href="./index.html" class="nav__link__anchor link__hover-effect">Home</a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="nav__link__anchor link__hover-effect">Search Movie</a>
+                    </li>
+                    <li class="link">
+                        <a href="" class="nav__link__anchor link__hover-effect">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="nav__wrapper--two">
+                    <h1 class="movie--title">Browse movies</h1>
+                    <div class="input__field">
+                        <form class="movie--form">
+                            <input type="text" id="input--movie"class="movie--bar" placeholder="Search for movies" onkeypress="retrieveTitle(event)">
+                            <input type="button" value="Search" class="btn--search" onkeypress="retrieveTitle(event)">
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>  
+        <div class="movie--collage__wrapper">
+            <img  class="movie--collage"src="./assets/movie-pic.jpg" alt="" srcset="">
+        </div>
+        <div class="nav__img">
+        </div>
+    </nav>
+    <header id="movie--main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="movies--header">
+                        <h2 class="movies__header--title">
+                            All <span class="text--red">Movies</span>
+                          </h2>
+                          <select id="filter" onchange="filterMovies(event)">
+                            <option value="" disabled selected>Sort</option>
+                            <option value="OLD_TO_NEW">Year, Old to New</option>
+                            <option value="NEW_TO_OLD">Year, New to Old</option>
+                          </select>
+                    </div>
+                    <div class="movies--wrapper">
+                        <i class="fas fa-spinner movies__loading--spinner"></i>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    
+</body>
+</html>
