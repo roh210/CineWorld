@@ -35,7 +35,7 @@ async function renderMovie(movieTitleOrData) {
   if (typeof movieTitleOrData === "string") {
     //checks wheter movieTitleorData is a string or an array
     const data = await fetch(
-      `http://www.omdbapi.com/?s=${movieTitleOrData}&apikey=ddfdef6`
+      `https://www.omdbapi.com/?s=${movieTitleOrData}&apikey=ddfdef6`
     );
       movieData = await data.json();
 
